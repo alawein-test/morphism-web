@@ -18,6 +18,23 @@ export default function Home() {
         <title>Morphism Systems — Formal Orchestration</title>
         <meta name="description" content="Enterprise orchestration with mathematical guarantees. Category theory applied to infrastructure." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="author" content="Meshal Alawein" />
+
+        {/* Open Graph */}
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Morphism Systems — Formal Orchestration" />
+        <meta property="og:description" content="Enterprise orchestration with mathematical guarantees. Category theory applied to infrastructure." />
+        <meta property="og:url" content="https://morphism.systems" />
+        <meta property="og:site_name" content="Morphism Systems" />
+        <meta property="og:image" content="https://morphism.systems/og-image.png" />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Morphism Systems — Formal Orchestration" />
+        <meta name="twitter:description" content="Enterprise orchestration with mathematical guarantees." />
+        <meta name="twitter:site" content="@meshal_alawein" />
+        <meta name="twitter:image" content="https://morphism.systems/og-image.png" />
+
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -94,8 +111,8 @@ export default function Home() {
           </div>
 
           {/* Decorative element */}
-          <div className="absolute right-0 top-1/2 -translate-y-1/2 w-1/3 h-2/3 opacity-20 hide-mobile">
-            <svg viewBox="0 0 400 400" className="w-full h-full" fill="none">
+          <div className="absolute right-0 top-1/2 -translate-y-1/2 w-1/3 h-2/3 opacity-20 hide-mobile" aria-hidden="true">
+            <svg viewBox="0 0 400 400" className="w-full h-full" fill="none" role="presentation">
               <circle cx="200" cy="200" r="150" stroke="#8B5CF6" strokeWidth="1" opacity="0.3" />
               <circle cx="200" cy="200" r="100" stroke="#8B5CF6" strokeWidth="1" opacity="0.5" />
               <circle cx="200" cy="200" r="50" stroke="#8B5CF6" strokeWidth="2" />
@@ -301,14 +318,17 @@ deploy auth_flow {
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="max-w-md mx-auto">
+                <label htmlFor="waitlist-email" className="sr-only">Email address</label>
                 <div className="flex gap-3">
                   <input
+                    id="waitlist-email"
                     type="email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     placeholder="your@email.com"
                     required
                     className="input flex-1"
+                    aria-label="Email address for waitlist"
                   />
                   <button type="submit" className="btn-primary whitespace-nowrap">
                     Get Access

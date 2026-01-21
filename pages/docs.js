@@ -17,8 +17,21 @@ export default function Docs() {
     <>
       <Head>
         <title>Documentation — Morphism Systems</title>
-        <meta name="description" content="Complete documentation for Morphism formal orchestration framework." />
+        <meta name="description" content="Complete documentation for Morphism formal orchestration framework. Category theory applied to infrastructure." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="author" content="Meshal Alawein" />
+
+        {/* Open Graph */}
+        <meta property="og:type" content="article" />
+        <meta property="og:title" content="Documentation — Morphism Systems" />
+        <meta property="og:description" content="Complete documentation for Morphism formal orchestration framework." />
+        <meta property="og:url" content="https://morphism.systems/docs" />
+        <meta property="og:site_name" content="Morphism Systems" />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content="Morphism Documentation" />
+        <meta name="twitter:site" content="@meshal_alawein" />
       </Head>
 
       <div className="min-h-screen bg-void">
@@ -65,7 +78,13 @@ export default function Docs() {
 
               <span className="mono text-xs text-slate-500 uppercase tracking-wider mb-4 block">Resources</span>
               <nav className="space-y-1">
-                <a href="https://github.com/alawein" target="_blank" rel="noopener" className="block px-3 py-2 mono text-sm text-slate-400 hover:text-white">
+                <a
+                  href="https://github.com/alawein"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block px-3 py-2 mono text-sm text-slate-400 hover:text-white"
+                  aria-label="View Morphism on GitHub (opens in new tab)"
+                >
                   GitHub ↗
                 </a>
                 <a href="mailto:contact@morphism.systems" className="block px-3 py-2 mono text-sm text-slate-400 hover:text-white">
