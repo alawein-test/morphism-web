@@ -1,6 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* ═══════════════════════════════════════════════════════════════
+   MORPHISM SYSTEMS - Brutalist x Minimalist Theme
+   ═══════════════════════════════════════════════════════════════ */
+
+:root {
+  --void: #0A0612;
+  --surface: #13101A;
+  --purple-glow: rgba(139, 92, 246, 0.15);
+  --grid-color: rgba(139, 92, 246, 0.08);
+}
 
 * {
   margin: 0;
@@ -13,46 +26,275 @@ html {
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Inter', system-ui, sans-serif;
+  background: var(--void);
+  color: #E2DFE8;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-h1, h2, h3 {
+/* Selection */
+::selection {
+  background: rgba(139, 92, 246, 0.4);
+  color: #fff;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   BRUTALIST TYPOGRAPHY
+   ═══════════════════════════════════════════════════════════════ */
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Space Grotesk', system-ui, sans-serif;
   font-weight: 700;
-  line-height: 1.2;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
 }
 
 h1 {
-  font-size: 3.5rem;
+  font-size: clamp(3rem, 8vw, 5rem);
 }
 
 h2 {
-  font-size: 2.5rem;
+  font-size: clamp(2rem, 5vw, 3rem);
 }
 
 h3 {
-  font-size: 1.5rem;
+  font-size: clamp(1.25rem, 3vw, 1.75rem);
 }
 
-.btn-primary {
-  @apply bg-blue-900 hover:bg-orange-500 text-white font-semibold py-3 px-6 rounded-lg transition-colors;
+/* Monospace accents */
+.mono {
+  font-family: 'JetBrains Mono', monospace;
+  font-feature-settings: 'liga' 1, 'calt' 1;
 }
 
-.btn-secondary {
-  @apply border-2 border-blue-900 hover:bg-blue-900 hover:text-white text-blue-900 font-semibold py-3 px-6 rounded-lg transition-colors;
+/* ═══════════════════════════════════════════════════════════════
+   LAYOUT
+   ═══════════════════════════════════════════════════════════════ */
+
+.container {
+  @apply max-w-6xl mx-auto px-6 md:px-8;
+}
+
+.container-narrow {
+  @apply max-w-4xl mx-auto px-6 md:px-8;
 }
 
 section {
-  @apply py-16 md:py-24;
+  @apply py-24 md:py-32 relative;
 }
 
-.container {
-  @apply max-w-6xl mx-auto px-4 md:px-6;
+/* ═══════════════════════════════════════════════════════════════
+   GRID BACKGROUND - Retro Tech Aesthetic
+   ═══════════════════════════════════════════════════════════════ */
+
+.grid-bg {
+  background-image:
+    linear-gradient(var(--grid-color) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
+  background-size: 40px 40px;
 }
+
+.grid-bg-animated {
+  background-image:
+    linear-gradient(var(--grid-color) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
+  background-size: 40px 40px;
+  animation: gridFlow 20s linear infinite;
+}
+
+@keyframes gridFlow {
+  0% { background-position: 0 0; }
+  100% { background-position: 40px 40px; }
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   BRUTALIST CARDS & CONTAINERS
+   ═══════════════════════════════════════════════════════════════ */
 
 .card {
-  @apply bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow;
+  @apply bg-surface border-2 border-purple-900/50 p-6 md:p-8;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  border-color: rgba(139, 92, 246, 0.5);
+  box-shadow: 0 0 40px rgba(139, 92, 246, 0.1);
+}
+
+.card-minimal {
+  @apply bg-surface/50 border border-slate-800 p-6;
+}
+
+/* Brutalist border accent */
+.border-brutal {
+  border: 3px solid;
+  border-color: #8B5CF6;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   BUTTONS - Chunky Brutalist Style
+   ═══════════════════════════════════════════════════════════════ */
+
+.btn {
+  @apply font-mono font-medium text-sm tracking-wide;
+  @apply px-6 py-3;
+  @apply border-2 transition-all duration-200;
+  @apply inline-flex items-center justify-center gap-2;
+}
+
+.btn-primary {
+  @apply btn;
+  @apply bg-purple-600 border-purple-600 text-white;
+  @apply hover:bg-purple-500 hover:border-purple-500;
+  @apply active:translate-y-0.5;
+}
+
+.btn-secondary {
+  @apply btn;
+  @apply bg-transparent border-purple-500 text-purple-400;
+  @apply hover:bg-purple-500/10 hover:text-purple-300;
+}
+
+.btn-ghost {
+  @apply btn;
+  @apply bg-transparent border-transparent text-slate-300;
+  @apply hover:text-white hover:bg-white/5;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   CODE BLOCKS - Terminal Aesthetic
+   ═══════════════════════════════════════════════════════════════ */
+
+code, pre {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.code-block {
+  @apply bg-slate-950 border border-slate-800 rounded-none p-4 overflow-x-auto;
+  font-size: 0.875rem;
+  line-height: 1.7;
+}
+
+.code-inline {
+  @apply bg-purple-950/50 text-purple-300 px-1.5 py-0.5 text-sm;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   TAGS & BADGES
+   ═══════════════════════════════════════════════════════════════ */
+
+.tag {
+  @apply font-mono text-xs tracking-wider uppercase;
+  @apply px-3 py-1 bg-purple-950 text-purple-400 border border-purple-800;
+}
+
+.badge {
+  @apply font-mono text-xs;
+  @apply px-2 py-0.5 bg-purple-600 text-white;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   DIVIDERS & DECORATIONS
+   ═══════════════════════════════════════════════════════════════ */
+
+.divider {
+  @apply h-px w-full bg-gradient-to-r from-transparent via-purple-800 to-transparent;
+}
+
+.divider-vertical {
+  @apply w-px h-full bg-gradient-to-b from-transparent via-purple-800 to-transparent;
+}
+
+/* Glow effect */
+.glow {
+  box-shadow: 0 0 60px rgba(139, 92, 246, 0.2);
+}
+
+.glow-text {
+  text-shadow: 0 0 40px rgba(139, 92, 246, 0.5);
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   INPUTS - Minimal Brutalist
+   ═══════════════════════════════════════════════════════════════ */
+
+.input {
+  @apply w-full bg-surface border-2 border-slate-700;
+  @apply px-4 py-3 text-white font-mono text-sm;
+  @apply placeholder:text-slate-500;
+  @apply focus:outline-none focus:border-purple-500;
+  transition: border-color 0.2s ease;
+}
+
+.input:hover {
+  border-color: #5A5272;
+}
+
+textarea.input {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   NAV
+   ═══════════════════════════════════════════════════════════════ */
+
+.nav-link {
+  @apply font-mono text-sm text-slate-400 hover:text-white transition-colors;
+  @apply px-4 py-2;
+}
+
+.nav-link.active {
+  @apply text-purple-400;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   UTILITIES
+   ═══════════════════════════════════════════════════════════════ */
+
+.text-gradient {
+  background: linear-gradient(135deg, #8B5CF6, #D946EF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.border-gradient {
+  border-image: linear-gradient(135deg, #8B5CF6, #D946EF) 1;
+}
+
+/* Responsive hide/show */
+@media (max-width: 768px) {
+  .hide-mobile { display: none; }
+}
+
+@media (min-width: 769px) {
+  .hide-desktop { display: none; }
+}
+
+/* Focus states */
+*:focus-visible {
+  outline: 2px solid #8B5CF6;
+  outline-offset: 2px;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--void);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3D2066;
+  border-radius: 0;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #5B21B6;
 }
