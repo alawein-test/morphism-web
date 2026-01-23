@@ -1,6 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* ═══════════════════════════════════════════════════════════════
+   MORPHISM SYSTEMS - Geometric Precision Theme
+   Protocol: Blue/Indigo/Purple
+   ═══════════════════════════════════════════════════════════════ */
+
+:root {
+  --void: #0f172a;
+  --surface: #1e293b;
+  --primary-glow: rgba(59, 130, 246, 0.15); /* Blue glow */
+  --grid-color: rgba(99, 102, 241, 0.08); /* Indigo grid */
+}
 
 * {
   margin: 0;
@@ -13,46 +27,118 @@ html {
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Inter', system-ui, sans-serif;
+  background: var(--void);
+  color: #e2e8f0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-h1, h2, h3 {
+/* Selection */
+::selection {
+  background: rgba(59, 130, 246, 0.4);
+  color: #fff;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   TYPOGRAPHY - Systemic & Structural
+   ═══════════════════════════════════════════════════════════════ */
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Space Grotesk', system-ui, sans-serif;
   font-weight: 700;
-  line-height: 1.2;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
 }
 
-h1 {
-  font-size: 3.5rem;
+h1 { font-size: clamp(3rem, 8vw, 5rem); }
+h2 { font-size: clamp(2rem, 5vw, 3rem); }
+h3 { font-size: clamp(1.25rem, 3vw, 1.75rem); }
+
+.mono {
+  font-family: 'JetBrains Mono', monospace;
+  font-feature-settings: 'liga' 1, 'calt' 1;
 }
 
-h2 {
-  font-size: 2.5rem;
+/* ═══════════════════════════════════════════════════════════════
+   GRID BACKGROUND - Isometric Layout
+   ═══════════════════════════════════════════════════════════════ */
+
+.grid-bg {
+  background-image:
+    linear-gradient(var(--grid-color) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
+  background-size: 40px 40px;
 }
 
-h3 {
-  font-size: 1.5rem;
+.grid-bg-animated {
+  background-image:
+    linear-gradient(var(--grid-color) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
+  background-size: 40px 40px;
+  animation: gridFlow 30s linear infinite;
+}
+
+@keyframes gridFlow {
+  0% { background-position: 0 0; }
+  100% { background-position: 40px 40px; }
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   CARDS & CONTAINERS
+   ═══════════════════════════════════════════════════════════════ */
+
+.card {
+  @apply bg-surface border-2 border-slate-700/50 p-6 md:p-8;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  border-color: rgba(99, 102, 241, 0.5); /* Indigo hover */
+  box-shadow: 0 0 40px rgba(59, 130, 246, 0.1); /* Blue glow */
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   BUTTONS - Geometric
+   ═══════════════════════════════════════════════════════════════ */
+
+.btn {
+  @apply font-mono font-medium text-sm tracking-wide;
+  @apply px-6 py-3;
+  @apply border-2 transition-all duration-200;
+  @apply inline-flex items-center justify-center gap-2;
 }
 
 .btn-primary {
-  @apply bg-blue-900 hover:bg-orange-500 text-white font-semibold py-3 px-6 rounded-lg transition-colors;
+  @apply btn;
+  @apply bg-blue-600 border-blue-600 text-white;
+  @apply hover:bg-blue-500 hover:border-blue-500;
+  @apply active:translate-y-0.5;
 }
 
 .btn-secondary {
-  @apply border-2 border-blue-900 hover:bg-blue-900 hover:text-white text-blue-900 font-semibold py-3 px-6 rounded-lg transition-colors;
+  @apply btn;
+  @apply bg-transparent border-indigo-500 text-indigo-400;
+  @apply hover:bg-indigo-500/10 hover:text-indigo-300;
 }
 
-section {
-  @apply py-16 md:py-24;
+/* ═══════════════════════════════════════════════════════════════
+   UTILITIES
+   ═══════════════════════════════════════════════════════════════ */
+
+.text-gradient {
+  background: linear-gradient(135deg, #3b82f6, #6366f1, #8b5cf6); /* Blue -> Indigo -> Purple */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
-.container {
-  @apply max-w-6xl mx-auto px-4 md:px-6;
+.border-gradient {
+  border-image: linear-gradient(135deg, #3b82f6, #6366f1) 1;
 }
 
-.card {
-  @apply bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow;
+/* Focus states */
+*:focus-visible {
+  outline: 2px solid #6366f1;
+  outline-offset: 2px;
 }
