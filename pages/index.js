@@ -304,7 +304,7 @@ if sources_of_truth > 1:
             <h2 className="text-white mb-6">Join the Waitlist</h2>
             <p className="text-slate-400 mb-8 max-w-lg mx-auto">
               We're onboarding select teams for our private beta.
-              Get early access to formal orchestration.
+              Get early access to governance that works.
             </p>
 
             {submitted ? (
