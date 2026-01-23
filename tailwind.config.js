@@ -7,48 +7,39 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        // Core void
-        void: '#0f172a', // Slate 900
-        surface: '#1e293b', // Slate 800
-        'surface-light': '#334155', // Slate 700
+        // Core purples
+        void: '#0A0612',
+        surface: '#13101A',
+        'surface-light': '#1A1523',
 
-        // Geometric Spectrum (Blue -> Indigo -> Purple)
-        blue: {
-          950: '#172554',
-          900: '#1e3a8a',
-          800: '#1e40af',
-          700: '#1d4ed8',
-          600: '#2563eb',
-          500: '#3b82f6', // Primary Blue
-          400: '#60a5fa',
-          300: '#93c5fd',
-        },
-        indigo: {
-          950: '#1e1b4b',
-          900: '#312e81',
-          800: '#3730a3',
-          700: '#4338ca',
-          600: '#4f46e5',
-          500: '#6366f1', // Primary Indigo
-          400: '#818cf8',
-          300: '#a5b4fc',
-        },
+        // Purple spectrum
         purple: {
-          500: '#8b5cf6', // Accent
+          950: '#1A0B2E',
+          900: '#2D1B4E',
+          800: '#3D2066',
+          700: '#5B21B6',
+          600: '#7C3AED',
+          500: '#8B5CF6',
+          400: '#A78BFA',
+          300: '#C4B5FD',
         },
 
-        // Neutrals (Slate)
+        // Accents
+        violet: '#A855F7',
+        electric: '#D946EF',
+
+        // Neutrals
         slate: {
-          950: '#020617',
-          900: '#0f172a',
-          800: '#1e293b',
-          700: '#334155',
-          600: '#475569',
-          500: '#64748b',
-          400: '#94a3b8',
-          300: '#cbd5e1',
-          200: '#e2e8f0',
-          100: '#f1f5f9',
+          950: '#0F0D14',
+          900: '#1A1625',
+          800: '#252033',
+          700: '#3D3654',
+          600: '#5A5272',
+          500: '#7A7290',
+          400: '#9D96AD',
+          300: '#C4BFCF',
+          200: '#E2DFE8',
+          100: '#F5F3F7',
         },
       },
       fontFamily: {

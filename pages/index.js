@@ -1,6 +1,5 @@
 import Head from 'next/head'
 import Link from 'next/link'
-import Image from 'next/image'
 import { useState } from 'react'
 
 export default function Home() {
@@ -16,27 +15,42 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Morphism Systems — Adaptive Interface Architectures</title>
-        <meta name="description" content="High-fidelity platform exploring polymorphic UI patterns and generative component structures." />
+        <title>Morphism Systems — Formal Orchestration</title>
+        <meta name="description" content="Enterprise orchestration with mathematical guarantees. Category theory applied to infrastructure." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="author" content="Meshal Alawein" />
-        <link rel="icon" href="/favicon.svg" />
+
+        {/* Open Graph */}
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Morphism Systems — Formal Orchestration" />
+        <meta property="og:description" content="Enterprise orchestration with mathematical guarantees. Category theory applied to infrastructure." />
+        <meta property="og:url" content="https://morphism.systems" />
+        <meta property="og:site_name" content="Morphism Systems" />
+        <meta property="og:image" content="https://morphism.systems/og-image.png" />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Morphism Systems — Formal Orchestration" />
+        <meta name="twitter:description" content="Enterprise orchestration with mathematical guarantees." />
+        <meta name="twitter:site" content="@meshal_alawein" />
+        <meta name="twitter:image" content="https://morphism.systems/og-image.png" />
+
+        <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className="min-h-screen bg-void selection:bg-blue-500/30">
+      <div className="min-h-screen bg-void">
         {/* Navigation */}
-        <nav className="fixed top-0 left-0 right-0 z-50 border-b border-slate-700/30 bg-void/80 backdrop-blur-sm">
+        <nav className="fixed top-0 left-0 right-0 z-50 border-b border-purple-900/30 bg-void/80 backdrop-blur-sm">
           <div className="container flex justify-between items-center h-16">
-            <Link href="/" className="flex items-center gap-3 group">
-              {/* Geometric Logo Placeholder */}
-              <div className="relative w-8 h-8">
-                <Image src="/favicon.svg" alt="Morphism Logo" width={32} height={32} className="w-full h-full" />
+            <Link href="/" className="flex items-center gap-3">
+              <div className="w-8 h-8 border-2 border-purple-500 flex items-center justify-center">
+                <div className="w-3 h-3 bg-purple-500" />
               </div>
-              <span className="mono text-sm tracking-widest text-slate-200 group-hover:text-blue-400 transition-colors">MORPHISM</span>
+              <span className="mono text-sm tracking-widest text-white">MORPHISM</span>
             </Link>
 
             <div className="flex items-center gap-6">
-              <Link href="/docs" className="nav-link hide-mobile font-mono text-sm text-slate-400 hover:text-blue-400 transition-colors">Docs</Link>
+              <Link href="/docs" className="nav-link hide-mobile">Docs</Link>
               <Link href="#contact" className="btn-primary">
                 Get Access
               </Link>
@@ -45,166 +59,303 @@ export default function Home() {
         </nav>
 
         {/* Hero */}
-        <section className="min-h-screen flex items-center grid-bg-animated pt-16 overflow-hidden relative">
-          <div className="container relative z-10">
+        <section className="min-h-screen flex items-center grid-bg pt-16">
+          <div className="container">
             <div className="max-w-4xl">
               {/* Label */}
               <div className="flex items-center gap-3 mb-8">
-                <span className="font-mono text-xs tracking-wider uppercase px-3 py-1 bg-blue-900/30 text-blue-400 border border-blue-800/50">Systemic Beta</span>
-                <span className="mono text-sm text-slate-500">v0.1.0</span>
+                <span className="tag">Pre-Release</span>
+                <span className="mono text-sm text-slate-500">v0.1.0-alpha</span>
               </div>
 
               {/* Main headline */}
-              <h1 className="text-white mb-6 leading-tight">
-                Adaptive
+              <h1 className="text-white mb-6">
+                Formal
                 <br />
-                <span className="text-gradient">Interface Architectures</span>
+                <span className="text-gradient">Orchestration</span>
               </h1>
 
               {/* Subtitle */}
               <p className="text-xl md:text-2xl text-slate-400 mb-12 max-w-2xl leading-relaxed">
-                Polymorphic UI patterns backed by rigorous state logic.
+                Category theory applied to infrastructure.
                 <br />
-                Engineered for precision, scalability, and fluidity.
+                Mathematical guarantees, not hope.
               </p>
 
               {/* Stats row */}
               <div className="grid grid-cols-3 gap-8 mb-12 max-w-xl">
                 <div>
-                  <div className="mono text-3xl md:text-4xl text-blue-500 mb-1">High</div>
-                  <div className="mono text-xs text-slate-500 uppercase tracking-wider">Fidelity</div>
+                  <div className="mono text-3xl md:text-4xl text-purple-400 mb-1">3×</div>
+                  <div className="mono text-xs text-slate-500 uppercase tracking-wider">Faster</div>
                 </div>
                 <div>
-                  <div className="mono text-3xl md:text-4xl text-indigo-500 mb-1">100%</div>
-                  <div className="mono text-xs text-slate-500 uppercase tracking-wider">Type-Safe</div>
+                  <div className="mono text-3xl md:text-4xl text-purple-400 mb-1">99.9%</div>
+                  <div className="mono text-xs text-slate-500 uppercase tracking-wider">Reliable</div>
                 </div>
                 <div>
-                  <div className="mono text-3xl md:text-4xl text-purple-500 mb-1">Atomic</div>
-                  <div className="mono text-xs text-slate-500 uppercase tracking-wider">Design</div>
+                  <div className="mono text-3xl md:text-4xl text-purple-400 mb-1">∞</div>
+                  <div className="mono text-xs text-slate-500 uppercase tracking-wider">Composable</div>
                 </div>
               </div>
 
               {/* CTA */}
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link href="/docs" className="btn-primary">
-                  Explore Components →
+                  Read the Docs →
                 </Link>
-                <Link href="#architecture" className="btn-secondary">
-                  System Architecture
+                <Link href="#how-it-works" className="btn-secondary">
+                  How it Works
                 </Link>
               </div>
             </div>
           </div>
 
-          {/* Decorative Geometric Overlay */}
-          <div className="absolute right-0 top-1/2 -translate-y-1/2 w-1/2 h-full opacity-10 pointer-events-none hide-mobile">
-             <svg viewBox="0 0 400 400" className="w-full h-full" fill="none">
-               <rect x="50" y="50" width="300" height="300" stroke="#3b82f6" strokeWidth="1" />
-               <rect x="100" y="100" width="200" height="200" stroke="#6366f1" strokeWidth="1" transform="rotate(45 200 200)" />
-               <circle cx="200" cy="200" r="50" stroke="#8b5cf6" strokeWidth="2" />
-               <line x1="0" y1="200" x2="400" y2="200" stroke="#3b82f6" strokeWidth="0.5" strokeDasharray="5 5" />
-               <line x1="200" y1="0" x2="200" y2="400" stroke="#3b82f6" strokeWidth="0.5" strokeDasharray="5 5" />
-             </svg>
+          {/* Decorative element */}
+          <div className="absolute right-0 top-1/2 -translate-y-1/2 w-1/3 h-2/3 opacity-20 hide-mobile" aria-hidden="true">
+            <svg viewBox="0 0 400 400" className="w-full h-full" fill="none" role="presentation">
+              <circle cx="200" cy="200" r="150" stroke="#8B5CF6" strokeWidth="1" opacity="0.3" />
+              <circle cx="200" cy="200" r="100" stroke="#8B5CF6" strokeWidth="1" opacity="0.5" />
+              <circle cx="200" cy="200" r="50" stroke="#8B5CF6" strokeWidth="2" />
+              <circle cx="200" cy="50" r="8" fill="#8B5CF6" />
+              <circle cx="50" cy="200" r="8" fill="#8B5CF6" />
+              <circle cx="200" cy="350" r="8" fill="#8B5CF6" />
+              <circle cx="350" cy="200" r="8" fill="#8B5CF6" />
+              <line x1="200" y1="50" x2="200" y2="350" stroke="#8B5CF6" strokeWidth="1" opacity="0.3" />
+              <line x1="50" y1="200" x2="350" y2="200" stroke="#8B5CF6" strokeWidth="1" opacity="0.3" />
+            </svg>
           </div>
         </section>
 
-        {/* Architecture Grid */}
-        <section id="architecture" className="border-t border-slate-800 bg-surface/50">
+        {/* Problem/Solution */}
+        <section className="border-t border-purple-900/30 bg-surface">
+          <div className="container">
+            <div className="grid md:grid-cols-2 gap-16">
+              {/* Problem */}
+              <div>
+                <span className="mono text-sm text-red-400 mb-4 block">// The Problem</span>
+                <h2 className="text-white mb-6">Orchestration is Broken</h2>
+                <ul className="space-y-4 text-slate-400">
+                  <li className="flex gap-3">
+                    <span className="text-red-400 mono">×</span>
+                    <span>30-40% compute overhead wasted on coordination</span>
+                  </li>
+                  <li className="flex gap-3">
+                    <span className="text-red-400 mono">×</span>
+                    <span>15% of outages from orchestration failures</span>
+                  </li>
+                  <li className="flex gap-3">
+                    <span className="text-red-400 mono">×</span>
+                    <span>Months of rewrites for cloud migrations</span>
+                  </li>
+                  <li className="flex gap-3">
+                    <span className="text-red-400 mono">×</span>
+                    <span>No guarantees — just hope and monitoring</span>
+                  </li>
+                </ul>
+              </div>
+
+              {/* Solution */}
+              <div>
+                <span className="mono text-sm text-purple-400 mb-4 block">// The Solution</span>
+                <h2 className="text-white mb-6">Morphism</h2>
+                <ul className="space-y-4 text-slate-400">
+                  <li className="flex gap-3">
+                    <span className="text-purple-400 mono">→</span>
+                    <span>Functors preserve structure across systems</span>
+                  </li>
+                  <li className="flex gap-3">
+                    <span className="text-purple-400 mono">→</span>
+                    <span>Natural transformations ensure correctness</span>
+                  </li>
+                  <li className="flex gap-3">
+                    <span className="text-purple-400 mono">→</span>
+                    <span>Composition is associative by construction</span>
+                  </li>
+                  <li className="flex gap-3">
+                    <span className="text-purple-400 mono">→</span>
+                    <span>Proofs, not prayers</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* How it Works */}
+        <section id="how-it-works" className="border-t border-purple-900/30">
           <div className="container">
             <div className="text-center mb-16">
-              <span className="mono text-sm text-indigo-400 mb-4 block">// Core Principles</span>
-              <h2 className="text-white">System Dynamics</h2>
+              <span className="mono text-sm text-slate-500 mb-4 block">// Architecture</span>
+              <h2 className="text-white">How it Works</h2>
             </div>
 
             <div className="grid md:grid-cols-3 gap-8">
               {[
                 {
-                  title: 'Atomic',
-                  desc: 'Components are broken down to their irreducible functional units.',
-                  color: 'blue'
+                  num: '01',
+                  title: 'Define',
+                  desc: 'Specify your system as a category. Objects are services, morphisms are data flows.',
+                  code: 'Category<Service, Flow>'
                 },
                 {
-                  title: 'Polymorphic',
-                  desc: 'Interfaces adapt fluidly to data shape and user context.',
-                  color: 'indigo'
+                  num: '02',
+                  title: 'Compose',
+                  desc: 'Build complex systems from simple parts. Composition is guaranteed to preserve properties.',
+                  code: 'f ∘ g = h'
                 },
                 {
-                  title: 'Generative',
-                  desc: 'Layouts compute their own optimal structure based on constraints.',
-                  color: 'purple'
-                }
+                  num: '03',
+                  title: 'Deploy',
+                  desc: 'Functors map your abstract spec to concrete infrastructure. Same guarantees, any target.',
+                  code: 'F: Spec → K8s | λ | VM'
+                },
               ].map((item) => (
-                <div key={item.title} className="card group">
-                  <h3 className={`text-2xl mb-4 text-${item.color}-400 group-hover:text-${item.color}-300 transition-colors`}>{item.title}</h3>
-                  <p className="text-slate-400 leading-relaxed">{item.desc}</p>
+                <div key={item.num} className="card">
+                  <span className="mono text-4xl text-purple-800 mb-4 block">{item.num}</span>
+                  <h3 className="text-white mb-3">{item.title}</h3>
+                  <p className="text-slate-400 mb-4">{item.desc}</p>
+                  <code className="code-inline">{item.code}</code>
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* Code/Tech Section */}
-        <section className="border-t border-slate-800">
+        {/* Code Example */}
+        <section className="border-t border-purple-900/30 bg-surface">
           <div className="container">
-             <div className="grid md:grid-cols-2 gap-12 items-center">
-               <div>
-                 <span className="mono text-sm text-blue-500 mb-4 block">// The Stack</span>
-                 <h2 className="text-white mb-6">Engineered for Scale</h2>
-                 <p className="text-slate-400 mb-8">
-                   Morphism is built on a Next.js foundation, leveraging React Server Components for optimal performance and Typescript for strict architectural enforcement.
-                 </p>
-                 
-                 <div className="grid grid-cols-2 gap-4">
-                   {['Next.js 14', 'TypeScript', 'Tailwind CSS', 'Framer Motion'].map((tech) => (
-                     <div key={tech} className="flex items-center gap-2 text-slate-300 font-mono text-sm">
-                       <div className="w-1.5 h-1.5 bg-blue-500 rounded-full" />
-                       {tech}
-                     </div>
-                   ))}
-                 </div>
-               </div>
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div>
+                <span className="mono text-sm text-slate-500 mb-4 block">// Example</span>
+                <h2 className="text-white mb-6">Simple by Design</h2>
+                <p className="text-slate-400 mb-6">
+                  Define your orchestration logic in a declarative DSL.
+                  The compiler proves correctness before deployment.
+                </p>
+                <ul className="space-y-3 text-slate-400">
+                  <li className="flex gap-3">
+                    <span className="text-purple-400">✓</span>
+                    Type-safe composition
+                  </li>
+                  <li className="flex gap-3">
+                    <span className="text-purple-400">✓</span>
+                    Automatic parallelization
+                  </li>
+                  <li className="flex gap-3">
+                    <span className="text-purple-400">✓</span>
+                    Compile-time verification
+                  </li>
+                </ul>
+              </div>
 
-               <div className="relative">
-                 <div className="absolute inset-0 bg-gradient-to-tr from-blue-500/20 to-purple-500/20 blur-2xl opacity-50" />
-                 <div className="relative bg-slate-950 border border-slate-800 p-6 font-mono text-sm text-slate-300 overflow-hidden">
-                   <div className="flex gap-2 mb-4 border-b border-slate-800 pb-4">
-                     <div className="w-3 h-3 rounded-full bg-slate-700" />
-                     <div className="w-3 h-3 rounded-full bg-slate-700" />
-                     <div className="w-3 h-3 rounded-full bg-slate-700" />
-                   </div>
-                   <pre className="language-tsx">
-                     <span className="text-purple-400">interface</span> <span className="text-yellow-200">SystemProps</span> {'{'}
-{`  mode: 'static' | 'fluid';
-  density: number;
-  theme: ThemeToken;
+              <div className="code-block">
+                <pre className="text-sm text-slate-300">
+{`// Define a pipeline
+pipeline auth_flow {
+  input: Request
+  output: Response
+
+  // Composable stages
+  validate -> authenticate -> authorize
+
+  // Each morphism is verified
+  @ensures(output.authenticated == true)
+}
+
+// Deploy anywhere
+deploy auth_flow {
+  target: kubernetes
+  replicas: 3
+
+  // Formal guarantees preserved
+  @invariant(latency < 100ms)
 }`}
-{'}'}
-<br />
-<span className="text-blue-400">export const</span> <span className="text-yellow-200">MorphismGrid</span> = ({'{'} mode {'}'}) ={'>'} {'{'}
-{`  return (
-    <Grid layout={mode}>
-      <nodes.map(n => <Node key={n.id} />)
-    </Grid>
-  );
-}`}
-{'}'}
-                   </pre>
-                 </div>
-               </div>
-             </div>
+                </pre>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Use Cases */}
+        <section className="border-t border-purple-900/30">
+          <div className="container">
+            <div className="text-center mb-16">
+              <span className="mono text-sm text-slate-500 mb-4 block">// Applications</span>
+              <h2 className="text-white">Built For</h2>
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {[
+                { num: '01', title: 'Cloud Infrastructure', desc: 'Multi-cloud orchestration without lock-in' },
+                { num: '02', title: 'AI/ML Pipelines', desc: 'LLM serving, training, and inference' },
+                { num: '03', title: 'Scientific Computing', desc: 'HPC workflows and simulations' },
+                { num: '04', title: 'Enterprise Systems', desc: 'Mission-critical orchestration' },
+              ].map((item) => (
+                <div key={item.title} className="card-minimal">
+                  <span className="mono text-2xl text-purple-600 mb-4 block">{item.num}</span>
+                  <h3 className="text-white text-lg mb-2">{item.title}</h3>
+                  <p className="text-slate-500 text-sm">{item.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section id="contact" className="border-t border-purple-900/30 bg-purple-950/30">
+          <div className="container-narrow text-center">
+            <span className="mono text-sm text-purple-400 mb-4 block">// Early Access</span>
+            <h2 className="text-white mb-6">Join the Waitlist</h2>
+            <p className="text-slate-400 mb-8 max-w-lg mx-auto">
+              We're onboarding select teams for our private beta.
+              Get early access to formal orchestration.
+            </p>
+
+            {submitted ? (
+              <div className="card max-w-md mx-auto">
+                <span className="text-purple-400 text-2xl mb-2 block">✓</span>
+                <p className="text-white">You're on the list. We'll be in touch.</p>
+              </div>
+            ) : (
+              <form onSubmit={handleSubmit} className="max-w-md mx-auto">
+                <label htmlFor="waitlist-email" className="sr-only">Email address</label>
+                <div className="flex gap-3">
+                  <input
+                    id="waitlist-email"
+                    type="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    placeholder="your@email.com"
+                    required
+                    className="input flex-1"
+                    aria-label="Email address for waitlist"
+                  />
+                  <button type="submit" className="btn-primary whitespace-nowrap">
+                    Get Access
+                  </button>
+                </div>
+              </form>
+            )}
           </div>
         </section>
 
         {/* Footer */}
-        <footer className="border-t border-slate-800 py-12 bg-surface">
-          <div className="container flex flex-col md:flex-row justify-between items-center gap-6">
-            <div className="flex items-center gap-3">
-              <Image src="/favicon.svg" alt="Logo" width={24} height={24} className="opacity-50 grayscale hover:grayscale-0 transition-all" />
-              <span className="mono text-xs text-slate-500">MORPHISM SYSTEMS</span>
-            </div>
-            
-            <div className="mono text-xs text-slate-600">
-              Architected by <a href="https://meshal.ai" className="text-slate-500 hover:text-blue-400 transition-colors">Meshal.ai</a>
+        <footer className="border-t border-purple-900/30 py-12">
+          <div className="container">
+            <div className="flex flex-col md:flex-row justify-between items-center gap-6">
+              <div className="flex items-center gap-3">
+                <div className="w-6 h-6 border-2 border-purple-800 flex items-center justify-center">
+                  <div className="w-2 h-2 bg-purple-800" />
+                </div>
+                <span className="mono text-xs text-slate-500">MORPHISM SYSTEMS LLC</span>
+              </div>
+
+              <div className="flex items-center gap-6">
+                <Link href="/docs" className="mono text-xs text-slate-500 hover:text-white">Docs</Link>
+                <a href="mailto:contact@morphism.systems" className="mono text-xs text-slate-500 hover:text-white">Contact</a>
+              </div>
+
+              <span className="mono text-xs text-slate-600">© 2026</span>
             </div>
           </div>
         </footer>
