@@ -10,8 +10,8 @@ export default async function handler(req, res) {
     return res.status(400).json({ message: 'Missing required fields' })
   }
 
-  // Contact form received - integrate with email service in production
-  // For now, just acknowledge receipt
+  // TODO: Send email or save to database
+  console.log('Contact form submission:', { name, email, company, message })
 
   return res.status(200).json({ message: 'Message received' })
 }
