@@ -15,23 +15,23 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Morphism Systems — Formal Orchestration</title>
-        <meta name="description" content="Enterprise orchestration with mathematical guarantees. Category theory applied to infrastructure." />
+        <title>Morphism — Structure-Preserving Transformations</title>
+        <meta name="description" content="Governance for software development. 42 tenets. 12 sections. One truth." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="author" content="Meshal Alawein" />
 
         {/* Open Graph */}
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Morphism Systems — Formal Orchestration" />
-        <meta property="og:description" content="Enterprise orchestration with mathematical guarantees. Category theory applied to infrastructure." />
+        <meta property="og:title" content="Morphism — Structure-Preserving Transformations" />
+        <meta property="og:description" content="Governance for software development. 42 tenets. 12 sections. One truth." />
         <meta property="og:url" content="https://morphism.systems" />
-        <meta property="og:site_name" content="Morphism Systems" />
+        <meta property="og:site_name" content="Morphism" />
         <meta property="og:image" content="https://morphism.systems/og-image.png" />
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Morphism Systems — Formal Orchestration" />
-        <meta name="twitter:description" content="Enterprise orchestration with mathematical guarantees." />
+        <meta name="twitter:title" content="Morphism — Structure-Preserving Transformations" />
+        <meta name="twitter:description" content="Governance for software development. 42 tenets. 12 sections. One truth." />
         <meta name="twitter:site" content="@meshal_alawein" />
         <meta name="twitter:image" content="https://morphism.systems/og-image.png" />
 
@@ -70,31 +70,31 @@ export default function Home() {
 
               {/* Main headline */}
               <h1 className="text-white mb-6">
-                Formal
+                Structure-Preserving
                 <br />
-                <span className="text-gradient">Orchestration</span>
+                <span className="text-gradient">Transformations</span>
               </h1>
 
               {/* Subtitle */}
               <p className="text-xl md:text-2xl text-slate-400 mb-12 max-w-2xl leading-relaxed">
-                Category theory applied to infrastructure.
+                Governance for software development.
                 <br />
-                Mathematical guarantees, not hope.
+                42 tenets. 12 sections. One truth.
               </p>
 
               {/* Stats row */}
               <div className="grid grid-cols-3 gap-8 mb-12 max-w-xl">
                 <div>
-                  <div className="mono text-3xl md:text-4xl text-purple-400 mb-1">3×</div>
-                  <div className="mono text-xs text-slate-500 uppercase tracking-wider">Faster</div>
+                  <div className="mono text-3xl md:text-4xl text-purple-400 mb-1">42</div>
+                  <div className="mono text-xs text-slate-500 uppercase tracking-wider">Tenets</div>
                 </div>
                 <div>
-                  <div className="mono text-3xl md:text-4xl text-purple-400 mb-1">99.9%</div>
-                  <div className="mono text-xs text-slate-500 uppercase tracking-wider">Reliable</div>
+                  <div className="mono text-3xl md:text-4xl text-purple-400 mb-1">12</div>
+                  <div className="mono text-xs text-slate-500 uppercase tracking-wider">Sections</div>
                 </div>
                 <div>
-                  <div className="mono text-3xl md:text-4xl text-purple-400 mb-1">∞</div>
-                  <div className="mono text-xs text-slate-500 uppercase tracking-wider">Composable</div>
+                  <div className="mono text-3xl md:text-4xl text-purple-400 mb-1">1</div>
+                  <div className="mono text-xs text-slate-500 uppercase tracking-wider">SSOT</div>
                 </div>
               </div>
 
@@ -133,23 +133,23 @@ export default function Home() {
               {/* Problem */}
               <div>
                 <span className="mono text-sm text-red-400 mb-4 block">// The Problem</span>
-                <h2 className="text-white mb-6">Orchestration is Broken</h2>
+                <h2 className="text-white mb-6">LLM Entropy</h2>
                 <ul className="space-y-4 text-slate-400">
                   <li className="flex gap-3">
                     <span className="text-red-400 mono">×</span>
-                    <span>30-40% compute overhead wasted on coordination</span>
+                    <span>Sessions tend toward disorder (T37)</span>
                   </li>
                   <li className="flex gap-3">
                     <span className="text-red-400 mono">×</span>
-                    <span>15% of outages from orchestration failures</span>
+                    <span>Context lost between sessions (T16)</span>
                   </li>
                   <li className="flex gap-3">
                     <span className="text-red-400 mono">×</span>
-                    <span>Months of rewrites for cloud migrations</span>
+                    <span>Activity theater — motion without progress (T41)</span>
                   </li>
                   <li className="flex gap-3">
                     <span className="text-red-400 mono">×</span>
-                    <span>No guarantees — just hope and monitoring</span>
+                    <span>Multiple sources of truth = zero sources (T4)</span>
                   </li>
                 </ul>
               </div>
@@ -157,23 +157,23 @@ export default function Home() {
               {/* Solution */}
               <div>
                 <span className="mono text-sm text-purple-400 mb-4 block">// The Solution</span>
-                <h2 className="text-white mb-6">Morphism</h2>
+                <h2 className="text-white mb-6">The Protocol</h2>
                 <ul className="space-y-4 text-slate-400">
                   <li className="flex gap-3">
                     <span className="text-purple-400 mono">→</span>
-                    <span>Functors preserve structure across systems</span>
+                    <span>Structure preserves (T1) — transformations that compose</span>
                   </li>
                   <li className="flex gap-3">
                     <span className="text-purple-400 mono">→</span>
-                    <span>Natural transformations ensure correctness</span>
+                    <span>Single source of truth (T4) — one document governs each domain</span>
                   </li>
                   <li className="flex gap-3">
                     <span className="text-purple-400 mono">→</span>
-                    <span>Composition is associative by construction</span>
+                    <span>One thing done (T3) — define done, finish before starting</span>
                   </li>
                   <li className="flex gap-3">
                     <span className="text-purple-400 mono">→</span>
-                    <span>Proofs, not prayers</span>
+                    <span>Governance, not hope</span>
                   </li>
                 </ul>
               </div>
@@ -193,21 +193,21 @@ export default function Home() {
               {[
                 {
                   num: '01',
-                  title: 'Define',
-                  desc: 'Specify your system as a category. Objects are services, morphisms are data flows.',
-                  code: 'Category<Service, Flow>'
+                  title: 'Kernel',
+                  desc: 'Governance. Slow-moving. Requires consensus to change. Pure specs, pure docs.',
+                  code: 'kernel/ → MORPHISM.md'
                 },
                 {
                   num: '02',
-                  title: 'Compose',
-                  desc: 'Build complex systems from simple parts. Composition is guaranteed to preserve properties.',
-                  code: 'f ∘ g = h'
+                  title: 'Hub',
+                  desc: 'Distribution. Ships to npm/PyPI. Fast iteration allowed. Hub may import kernel.',
+                  code: 'hub/ → npm publish'
                 },
                 {
                   num: '03',
-                  title: 'Deploy',
-                  desc: 'Functors map your abstract spec to concrete infrastructure. Same guarantees, any target.',
-                  code: 'F: Spec → K8s | λ | VM'
+                  title: 'Lab',
+                  desc: 'Experiments. May break. Never imported by kernel or hub. Nothing imports lab.',
+                  code: 'lab/ → experiments'
                 },
               ].map((item) => (
                 <div key={item.num} className="card">
@@ -226,50 +226,46 @@ export default function Home() {
           <div className="container">
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div>
-                <span className="mono text-sm text-slate-500 mb-4 block">// Example</span>
-                <h2 className="text-white mb-6">Simple by Design</h2>
+                <span className="mono text-sm text-slate-500 mb-4 block">// LLM Entropy</span>
+                <h2 className="text-white mb-6">The Failure Mode</h2>
                 <p className="text-slate-400 mb-6">
-                  Define your orchestration logic in a declarative DSL.
-                  The compiler proves correctness before deployment.
+                  Sessions tend toward disorder. Left unconstrained, an LLM explores rather than executes.
+                  Output ≠ progress. Artifacts without authority are noise.
                 </p>
                 <ul className="space-y-3 text-slate-400">
                   <li className="flex gap-3">
                     <span className="text-purple-400">✓</span>
-                    Type-safe composition
+                    Explicit context anchors
                   </li>
                   <li className="flex gap-3">
                     <span className="text-purple-400">✓</span>
-                    Automatic parallelization
+                    Session limits
                   </li>
                   <li className="flex gap-3">
                     <span className="text-purple-400">✓</span>
-                    Compile-time verification
+                    Verification checkpoints
                   </li>
                 </ul>
               </div>
 
               <div className="code-block">
                 <pre className="text-sm text-slate-300">
-{`// Define a pipeline
-pipeline auth_flow {
-  input: Request
-  output: Response
+{`// The Entropy Formula (T37)
+S(session) = -k Σ pᵢ ln(pᵢ)
 
-  // Composable stages
-  validate -> authenticate -> authorize
+// Information accumulates but
+// knowledge does not.
 
-  // Each morphism is verified
-  @ensures(output.authenticated == true)
-}
+// Signal degrades with sources:
+Signal(docs) ∝ 1/n
+// where n = number of "sources of truth"
 
-// Deploy anywhere
-deploy auth_flow {
-  target: kubernetes
-  replicas: 3
+// The Override
+if sources_of_truth > 1:
+    sources_of_truth = 0
 
-  // Formal guarantees preserved
-  @invariant(latency < 100ms)
-}`}
+// Solution: One document governs.
+// MORPHISM.md is the override.`}
                 </pre>
               </div>
             </div>
@@ -286,10 +282,10 @@ deploy auth_flow {
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {[
-                { num: '01', title: 'Cloud Infrastructure', desc: 'Multi-cloud orchestration without lock-in' },
-                { num: '02', title: 'AI/ML Pipelines', desc: 'LLM serving, training, and inference' },
-                { num: '03', title: 'Scientific Computing', desc: 'HPC workflows and simulations' },
-                { num: '04', title: 'Enterprise Systems', desc: 'Mission-critical orchestration' },
+                { num: '01', title: 'LLM Governance', desc: 'Context anchors and session limits' },
+                { num: '02', title: 'Monorepo Standards', desc: 'Kernel/Hub/Lab architecture' },
+                { num: '03', title: 'Documentation SSOT', desc: 'One document governs each domain' },
+                { num: '04', title: 'Team Alignment', desc: 'Shared tenets, shared outcomes' },
               ].map((item) => (
                 <div key={item.title} className="card-minimal">
                   <span className="mono text-2xl text-purple-600 mb-4 block">{item.num}</span>
@@ -347,15 +343,18 @@ deploy auth_flow {
                 <div className="w-6 h-6 border-2 border-purple-800 flex items-center justify-center">
                   <div className="w-2 h-2 bg-purple-800" />
                 </div>
-                <span className="mono text-xs text-slate-500">MORPHISM SYSTEMS LLC</span>
+                <span className="mono text-xs text-slate-500">MORPHISM</span>
               </div>
 
               <div className="flex items-center gap-6">
                 <Link href="/docs" className="mono text-xs text-slate-500 hover:text-white">Docs</Link>
-                <a href="mailto:contact@morphism.systems" className="mono text-xs text-slate-500 hover:text-white">Contact</a>
+                <a href="mailto:meshal@berkeley.edu" className="mono text-xs text-slate-500 hover:text-white">Contact</a>
               </div>
 
-              <span className="mono text-xs text-slate-600">© 2026</span>
+              <div className="text-right">
+                <span className="mono text-xs text-slate-600 block">Created by Meshal Alawein</span>
+                <span className="mono text-xs text-slate-700">Entropy is the default. Governance is the override.</span>
+              </div>
             </div>
           </div>
         </footer>
