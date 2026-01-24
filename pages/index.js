@@ -15,27 +15,23 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Morphism — Structure-Preserving Transformations</title>
-        <meta name="description" content="Governance for software development. 42 tenets. 12 sections. One truth." />
+        <title>Morphism Systems — Adaptive Interface Architectures</title>
+        <meta name="description" content="High-fidelity platform exploring polymorphic UI patterns and generative component structures for enterprise ecosystems." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="author" content="Meshal Alawein" />
-
+        
         {/* Open Graph */}
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Morphism — Structure-Preserving Transformations" />
-        <meta property="og:description" content="Governance for software development. 42 tenets. 12 sections. One truth." />
-        <meta property="og:url" content="https://morphism.systems" />
-        <meta property="og:site_name" content="Morphism" />
-        <meta property="og:image" content="https://morphism.systems/og-image.png" />
-
+        <meta property="og:title" content="Morphism Systems — Adaptive Interface Architectures" />
+        <meta property="og:description" content="Engineering the next generation of polymorphic UI patterns and generative architectures." />
+        <meta property="og:image" content="/logo-brand.svg" />
+        
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Morphism — Structure-Preserving Transformations" />
-        <meta name="twitter:description" content="Governance for software development. 42 tenets. 12 sections. One truth." />
-        <meta name="twitter:site" content="@meshal_alawein" />
-        <meta name="twitter:image" content="https://morphism.systems/og-image.png" />
-
-        <link rel="icon" href="/favicon.ico" />
+        <meta name="twitter:title" content="Morphism Systems" />
+        <meta name="twitter:description" content="High-fidelity generative component structures." />
+        
+        <link rel="icon" href="/favicon.svg" />
       </Head>
 
       <div className="min-h-screen bg-void">
