@@ -15,21 +15,21 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Morphism Systems — Adaptive Interface Architectures</title>
-        <meta name="description" content="High-fidelity platform exploring polymorphic UI patterns and generative component structures for enterprise ecosystems." />
+        <title>Morphism Systems — AI-Native Development Orchestration</title>
+        <meta name="description" content="Prevent architecture drift and technical debt with battle-tested governance frameworks and intelligent scaffolding. Built from managing 2,300+ concurrent workflows." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="author" content="Meshal Alawein" />
         
         {/* Open Graph */}
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Morphism Systems — Adaptive Interface Architectures" />
-        <meta property="og:description" content="Engineering the next generation of polymorphic UI patterns and generative architectures." />
+        <meta property="og:title" content="Morphism Systems — AI-Native Development Orchestration" />
+        <meta property="og:description" content="Prevent architecture drift and technical debt with battle-tested governance frameworks. Institutional knowledge as infrastructure." />
         <meta property="og:image" content="/logo-brand.svg" />
-        
+
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Morphism Systems" />
-        <meta name="twitter:description" content="High-fidelity generative component structures." />
+        <meta name="twitter:title" content="Morphism Systems — AI-Native Development Orchestration" />
+        <meta name="twitter:description" content="Battle-tested governance frameworks for AI-native development. Built from 2,300+ workflows." />
         
         <link rel="icon" href="/favicon.svg" />
       </Head>
@@ -60,36 +60,43 @@ export default function Home() {
             <div className="max-w-4xl">
               {/* Label */}
               <div className="flex items-center gap-3 mb-8">
-                <span className="tag">Pre-Release</span>
-                <span className="mono text-sm text-slate-500">v0.1.0-alpha</span>
+                <span className="tag">AI-Native Development</span>
+                <span className="mono text-sm text-slate-500">Framework Available</span>
               </div>
 
               {/* Main headline */}
               <h1 className="text-white mb-6">
-                Structure-Preserving
+                Development
                 <br />
-                <span className="text-gradient">Transformations</span>
+                <span className="text-gradient">Orchestration</span>
               </h1>
 
               {/* Subtitle */}
-              <p className="text-xl md:text-2xl text-slate-400 mb-12 max-w-2xl leading-relaxed">
-                Governance for software development.
-                <br />
-                42 tenets. 12 sections. One truth.
+              <p className="text-xl md:text-2xl text-slate-400 mb-8 max-w-2xl leading-relaxed">
+                Prevent architecture drift and technical debt with battle-tested governance frameworks and intelligent scaffolding.
+              </p>
+
+              {/* Social proof */}
+              <p className="mono text-sm text-purple-400 mb-12">
+                Built from managing 2,300+ concurrent workflows across 10+ production platforms.
               </p>
 
               {/* Stats row */}
-              <div className="grid grid-cols-3 gap-8 mb-12 max-w-xl">
+              <div className="grid grid-cols-4 gap-6 mb-12 max-w-2xl">
                 <div>
-                  <div className="mono text-3xl md:text-4xl text-purple-400 mb-1">42</div>
+                  <div className="mono text-2xl md:text-3xl text-purple-400 mb-1">42</div>
                   <div className="mono text-xs text-slate-500 uppercase tracking-wider">Tenets</div>
                 </div>
                 <div>
-                  <div className="mono text-3xl md:text-4xl text-purple-400 mb-1">12</div>
-                  <div className="mono text-xs text-slate-500 uppercase tracking-wider">Sections</div>
+                  <div className="mono text-2xl md:text-3xl text-purple-400 mb-1">2.3K+</div>
+                  <div className="mono text-xs text-slate-500 uppercase tracking-wider">Workflows</div>
                 </div>
                 <div>
-                  <div className="mono text-3xl md:text-4xl text-purple-400 mb-1">1</div>
+                  <div className="mono text-2xl md:text-3xl text-purple-400 mb-1">40+</div>
+                  <div className="mono text-xs text-slate-500 uppercase tracking-wider">Packages</div>
+                </div>
+                <div>
+                  <div className="mono text-2xl md:text-3xl text-purple-400 mb-1">1</div>
                   <div className="mono text-xs text-slate-500 uppercase tracking-wider">SSOT</div>
                 </div>
               </div>
@@ -97,10 +104,10 @@ export default function Home() {
               {/* CTA */}
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link href="/docs" className="btn-primary">
-                  Read the Docs →
+                  Get the Framework →
                 </Link>
-                <Link href="#how-it-works" className="btn-secondary">
-                  How it Works
+                <Link href="#contact" className="btn-secondary">
+                  Join Platform Waitlist
                 </Link>
               </div>
             </div>
@@ -129,23 +136,23 @@ export default function Home() {
               {/* Problem */}
               <div>
                 <span className="mono text-sm text-red-400 mb-4 block">// The Problem</span>
-                <h2 className="text-white mb-6">LLM Entropy</h2>
+                <h2 className="text-white mb-6">Development Chaos</h2>
                 <ul className="space-y-4 text-slate-400">
                   <li className="flex gap-3">
                     <span className="text-red-400 mono">×</span>
-                    <span>Sessions tend toward disorder (T37)</span>
+                    <span>Architecture drift — standards erode silently</span>
                   </li>
                   <li className="flex gap-3">
                     <span className="text-red-400 mono">×</span>
-                    <span>Context lost between sessions (T16)</span>
+                    <span>LLM entropy — sessions without convergence (T37)</span>
                   </li>
                   <li className="flex gap-3">
                     <span className="text-red-400 mono">×</span>
-                    <span>Activity theater — motion without progress (T41)</span>
+                    <span>Teams reinventing folder structures and CI/CD</span>
                   </li>
                   <li className="flex gap-3">
                     <span className="text-red-400 mono">×</span>
-                    <span>Multiple sources of truth = zero sources (T4)</span>
+                    <span>Institutional knowledge lost in Slack threads</span>
                   </li>
                 </ul>
               </div>
@@ -153,23 +160,23 @@ export default function Home() {
               {/* Solution */}
               <div>
                 <span className="mono text-sm text-purple-400 mb-4 block">// The Solution</span>
-                <h2 className="text-white mb-6">The Protocol</h2>
+                <h2 className="text-white mb-6">Orchestration</h2>
                 <ul className="space-y-4 text-slate-400">
                   <li className="flex gap-3">
                     <span className="text-purple-400 mono">→</span>
-                    <span>Structure preserves (T1) — transformations that compose</span>
+                    <span>Governance kernel — canonical templates and patterns</span>
                   </li>
                   <li className="flex gap-3">
                     <span className="text-purple-400 mono">→</span>
-                    <span>Single source of truth (T4) — one document governs each domain</span>
+                    <span>Intelligent scaffolding — production-ready, not boilerplate</span>
                   </li>
                   <li className="flex gap-3">
                     <span className="text-purple-400 mono">→</span>
-                    <span>One thing done (T3) — define done, finish before starting</span>
+                    <span>Self-healing workflows — drift detection, auto-correction</span>
                   </li>
                   <li className="flex gap-3">
                     <span className="text-purple-400 mono">→</span>
-                    <span>Governance, not hope</span>
+                    <span>Institutional knowledge as infrastructure</span>
                   </li>
                 </ul>
               </div>
@@ -268,27 +275,67 @@ if sources_of_truth > 1:
           </div>
         </section>
 
-        {/* Use Cases */}
+        {/* What's Available */}
         <section className="border-t border-purple-900/30">
           <div className="container">
-            <div className="text-center mb-16">
-              <span className="mono text-sm text-slate-500 mb-4 block">// Applications</span>
-              <h2 className="text-white">Built For</h2>
-            </div>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {[
-                { num: '01', title: 'LLM Governance', desc: 'Context anchors and session limits' },
-                { num: '02', title: 'Monorepo Standards', desc: 'Kernel/Hub/Lab architecture' },
-                { num: '03', title: 'Documentation SSOT', desc: 'One document governs each domain' },
-                { num: '04', title: 'Team Alignment', desc: 'Shared tenets, shared outcomes' },
-              ].map((item) => (
-                <div key={item.title} className="card-minimal">
-                  <span className="mono text-2xl text-purple-600 mb-4 block">{item.num}</span>
-                  <h3 className="text-white text-lg mb-2">{item.title}</h3>
-                  <p className="text-slate-500 text-sm">{item.desc}</p>
+            <div className="grid md:grid-cols-2 gap-16">
+              {/* Available Now */}
+              <div>
+                <span className="mono text-sm text-green-400 mb-4 block">// Available Now</span>
+                <h2 className="text-white mb-6">The Framework</h2>
+                <ul className="space-y-4 text-slate-400">
+                  <li className="flex gap-3">
+                    <span className="text-green-400 mono">✓</span>
+                    <span>Governance framework — 42 tenets, 12 sections</span>
+                  </li>
+                  <li className="flex gap-3">
+                    <span className="text-green-400 mono">✓</span>
+                    <span>Production templates — monorepo, packages, docs</span>
+                  </li>
+                  <li className="flex gap-3">
+                    <span className="text-green-400 mono">✓</span>
+                    <span>Architectural patterns — Kernel/Hub/Lab</span>
+                  </li>
+                  <li className="flex gap-3">
+                    <span className="text-green-400 mono">✓</span>
+                    <span>LLM collaboration standards — The Protocol</span>
+                  </li>
+                </ul>
+                <div className="mt-6">
+                  <Link href="/docs" className="btn-primary">
+                    Get the Framework →
+                  </Link>
                 </div>
-              ))}
+              </div>
+
+              {/* Coming Soon */}
+              <div>
+                <span className="mono text-sm text-purple-400 mb-4 block">// Coming Soon</span>
+                <h2 className="text-white mb-6">The Platform</h2>
+                <ul className="space-y-4 text-slate-400">
+                  <li className="flex gap-3">
+                    <span className="text-purple-400 mono">○</span>
+                    <span>morphism-cli — one-command repo generation</span>
+                  </li>
+                  <li className="flex gap-3">
+                    <span className="text-purple-400 mono">○</span>
+                    <span>Drift detection — continuous architecture monitoring</span>
+                  </li>
+                  <li className="flex gap-3">
+                    <span className="text-purple-400 mono">○</span>
+                    <span>Auto-correction — self-healing workflows</span>
+                  </li>
+                  <li className="flex gap-3">
+                    <span className="text-purple-400 mono">○</span>
+                    <span>Multi-agent orchestration — specialized agents</span>
+                  </li>
+                </ul>
+                <div className="mt-6">
+                  <Link href="#contact" className="btn-secondary">
+                    Join Waitlist
+                  </Link>
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -299,8 +346,8 @@ if sources_of_truth > 1:
             <span className="mono text-sm text-purple-400 mb-4 block">// Early Access</span>
             <h2 className="text-white mb-6">Join the Waitlist</h2>
             <p className="text-slate-400 mb-8 max-w-lg mx-auto">
-              We're onboarding select teams for our private beta.
-              Get early access to governance that works.
+              Be first to access the orchestration platform when it launches.
+              Framework available now — platform coming Q2 2026.
             </p>
 
             {submitted ? (
@@ -344,7 +391,8 @@ if sources_of_truth > 1:
 
               <div className="flex items-center gap-6">
                 <Link href="/docs" className="mono text-xs text-slate-500 hover:text-white">Docs</Link>
-                <a href="mailto:meshal@berkeley.edu" className="mono text-xs text-slate-500 hover:text-white">Contact</a>
+                <a href="https://github.com/alawein/morphism" className="mono text-xs text-slate-500 hover:text-white">GitHub</a>
+                <a href="mailto:contact@morphism.systems" className="mono text-xs text-slate-500 hover:text-white">Contact</a>
               </div>
 
               <div className="text-right">
