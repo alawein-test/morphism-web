@@ -23,21 +23,22 @@ export default function Docs() {
   return (
     <>
       <Head>
-        <title>Documentation — Morphism</title>
-        <meta name="description" content="The Morphism governance framework. 42 tenets. 12 sections. One truth." />
+        <title>Framework Documentation — Morphism Systems</title>
+        <meta name="description" content="The Morphism governance framework for AI-native development. 42 tenets. 12 sections. Battle-tested patterns from 2,300+ concurrent workflows." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="author" content="Meshal Alawein" />
 
         {/* Open Graph */}
         <meta property="og:type" content="article" />
-        <meta property="og:title" content="Documentation — Morphism" />
-        <meta property="og:description" content="The Morphism governance framework. 42 tenets. 12 sections. One truth." />
+        <meta property="og:title" content="Framework Documentation — Morphism Systems" />
+        <meta property="og:description" content="The Morphism governance framework for AI-native development. 42 tenets for preventing architecture drift." />
         <meta property="og:url" content="https://morphism.systems/docs" />
-        <meta property="og:site_name" content="Morphism" />
+        <meta property="og:site_name" content="Morphism Systems" />
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Morphism Documentation" />
+        <meta name="twitter:title" content="Morphism Framework Documentation" />
+        <meta name="twitter:description" content="42 tenets for AI-native development. Battle-tested governance patterns." />
         <meta name="twitter:site" content="@meshal_alawein" />
       </Head>
 
@@ -86,7 +87,7 @@ export default function Docs() {
               <span className="mono text-xs text-slate-500 uppercase tracking-wider mb-4 block">Resources</span>
               <nav className="space-y-1">
                 <a
-                  href="https://github.com/alawein"
+                  href="https://github.com/alawein/morphism"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block px-3 py-2 mono text-sm text-slate-400 hover:text-white"
@@ -94,7 +95,7 @@ export default function Docs() {
                 >
                   GitHub ↗
                 </a>
-                <a href="mailto:meshal@berkeley.edu" className="block px-3 py-2 mono text-sm text-slate-400 hover:text-white">
+                <a href="mailto:contact@morphism.systems" className="block px-3 py-2 mono text-sm text-slate-400 hover:text-white">
                   Contact
                 </a>
               </nav>
@@ -647,7 +648,8 @@ Method ⊥ Morphism`}
                   </span>
                   <div className="flex gap-4">
                     <Link href="/" className="mono text-xs text-slate-500 hover:text-white">Home</Link>
-                    <a href="mailto:meshal@berkeley.edu" className="mono text-xs text-slate-500 hover:text-white">Contact</a>
+                    <a href="https://github.com/alawein/morphism" className="mono text-xs text-slate-500 hover:text-white">GitHub</a>
+                    <a href="mailto:contact@morphism.systems" className="mono text-xs text-slate-500 hover:text-white">Contact</a>
                   </div>
                 </div>
               </footer>
